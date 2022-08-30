@@ -63,25 +63,28 @@ const getIngredients = Object.keys(cocktail)                   //these filter/re
       }
       return ingredients;
     }, {});
-//    var getMeasure = Object.keys(cocktail)
-//    .filter(function (measure) {
-//        return measure.indexOf("strMeasure") == 0;
-//    })
-//    .reduce(function (measures, measure) {
-//        if (cocktail[ingredient] != null) {
-//            measures[measure] = cocktail[measure];
-//    }
-//    return measures;
-//}, {});
+const getMeasure = Object.keys(cocktail)
+    .filter(function (measure) {
+        return measure.indexOf("strMeasure") == 0;
+    })
+    .reduce(function (measures, measure) {
+        if (cocktail[measure] != null) {
+            measures[measure] = cocktail[measure];
+    }
+    return measures;
+}, {});
   for (let key in getIngredients) {
     let value = getIngredients[key];
-// for (let key in getMeasure) {
- //   let value = getMeasure[key];
- //}
+ for (let key in getMeasure) {
+   let value = getMeasure[key];
+}
+  var cocktailMeasure = measures;
+  //var cocktailIngredients = ingredients
+
     listItem = document.createElement("li");
     listItem.innerHTML = value
     cocktailIngredients.appendChild(listItem);
-    //(cocktailMeasure + cocktailIngredients).appendChild(listItem);
+    (cocktailMeasure + cocktailIngredients).appendChild(listItem);
   }
 
   var cocktailInstructions = document.createElement("p");

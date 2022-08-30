@@ -1,11 +1,20 @@
 var subbtnEl = document.getElementById('choose-button')
 
 //subbtnEl.addEventListener('click', document.location.reload(false));
+
 subbtnEl.addEventListener('click', getRandomCocktail);
 
 //retrieve random drink
 function getRandomCocktail(event) {
     event.preventDefault();
+
+    var element = document.getElementById('ingredients');
+        element.remove();
+
+    var element = document.createElement('ul');
+        element.setAttribute('id', 'ingredients');
+        
+    
 
     const cocktailPage = document.getElementById("random");
     cocktailPage.setAttribute("class", "bg-success text-white");
