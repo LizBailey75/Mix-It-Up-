@@ -8,13 +8,13 @@ subbtnEl.addEventListener('click', getRandomCocktail);
 function getRandomCocktail(event) {
     event.preventDefault();
 
-    var element = document.getElementById('ingredients');
-        element.remove();
-
-    var element = document.createElement('ul');
-        element.setAttribute('id', 'ingredients');
-        
+    document.getElementById('ingredients').remove();
+    var ULelement = document.createElement('ul');
+    ULelement.setAttribute('id', 'ingredients');
+    var instructionsElem = document.getElementById('instructions');
     
+    document.getElementById('random').insertBefore(ULelement, instructionsElem);
+           
 
     const cocktailPage = document.getElementById("random");
     cocktailPage.setAttribute("class", "bg-success text-white");
