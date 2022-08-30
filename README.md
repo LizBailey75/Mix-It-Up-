@@ -6,6 +6,7 @@ Enter Cocktail Name --> Displays List of Ingredients ---> Displays Mixing Direct
 DESCRIPTION: This project uses the cocktaildb.com API to provide users with three options: select a drink by name,
 select a drink by ingredient, and choose a random drink. The project is written in Javascript and uses Bootstrap to enhance styling.
 
+
 SCREENSHOT:
 Screenshot (12).png 
 Screenshot is displayed as an issue at github.com/lizbailey75/Mix-It-Up-.

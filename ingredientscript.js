@@ -2,6 +2,7 @@ var ingredientSearched = [];
 var ingredientSearchedLocal =
   JSON.parse(localStorage.getItem("ingredientSearched")) || [];
 
+  
 
 document.getElementById("ingred-button").addEventListener("click", handleSearchFormSubmit);
 var inputIngredText = document.getElementById("inputingred").value;
