@@ -16,45 +16,44 @@
   </div>
   <body>
     <header class="d-inline-block w-100">
-      <div class="jumbotron jumbotron-fluid text-center bg-success text-white">
+      <div class="jumbotron jumbotron-fluid text-center text-white">
         <h2>Mix it UP!</h2>
       </div>
     </header>
     <main class="container-fluid text-center">
-      <div class="row">
+      <div class="row  justify-content-around">
       <!--<div class="card-deck">-->
       <!--set up container-->
-          <div class="card col bg-transparent rounded border-primary">
+          <div class="card col-sm-3 bg-transparent rounded border-success text-centered h-70">
             <!--card has picture which is blank, text,  and input form.-->
-            <img class="card-img-top" src="" id="cocktailpic" alt="Cocktail image"/>
-            <h3 class="card-header">Enter Cocktail Name</h3>
-            <div class="card-body">
-              <p class="card-text">Dark and Stormy? Gimlet? Martini?</p>
+            <h3 class="card-header text-white">Enter Cocktail Name</h3>
+            <div class="card-body" id="cocktail">
+              <p class="card-text" id="drink"></p>
+              <img class="card-img" src="" id="cocktailpic"/>
               <div form class="d-flex">
-                <input type="text" class="form-control me-2" placeholder="DRINK" id="inputdrink"/>
-                <button type="submit" class="btn btn-primary" id="submit-button">Submit</button>
+                <input type="text" class="form-control me-2" placeholder="Drink" id="inputdrink"/>
+                <button type="submit" class="btn btn-success" id="submit-button">Submit</button>
               </div>
             </div>
           </div>
-          <div class="card col bg-transparent rounded  border-warning">
-            <img class="card-img-top" src=""  id="ingredpic"  alt="Ingredient image"/> 
-            <h3 class="card-header">Enter Cocktail Ingredient</h3>     
+          <div class="card col-sm-3 bg-transparent rounded  border-success text-centered h-70">
+            <h3 class="card-header text-white">Enter Cocktail Ingredient</h3>     
             <div class="card-body">
-              <p class="card-text">Gin? Vodka? Tequila?</p>
+              <p class="card-text"></p>
+              <img class="card-img" src=""  id="ingredpic"/> 
               <div form class="d-flex">
                 <input type="text" class="form-control me-2" placeholder="Gin" id="inputingred"/>
-                <button type="submit" class="btn btn-warning" id="ingred-button">Submit</button>
+                <button type="submit" class="btn btn-success" id="ingred-button">Submit</button>
               </div>
             </div>
           </div>
-          <div class="card col  bg-transparent rounded  border-success">
-            <h3 class="card-header">Choose Random Cocktail</h3>
-
-            <img class="card-img-top" src="" id="randompic" alt="random cocktail picture"/>
+          <div class="card col-sm-3  bg-transparent rounded  border-success text-centered h-70">
+            <h3 class="card-header text-white">Choose Random Cocktail</h3>
             <div class="card-body">
-              <p class="card-text" >Feeling adventurous?</p>
+              <button type="submit" class="btn btn-success"  id="choose-button">Show me something new!></button>
+              <p class="card-text" ></p>
+              <img class="card-img" src="" id="randompic"/>
               <div id="cocktailTitle"></div>
-              <button type="submit" class="btn btn-success"  id="choose-button">Choose></button>
             </div>
           </div>
         </div>   
@@ -67,5 +66,5 @@
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
     crossorigin="anonymous"
   ></script>
-  <script src="./script.js"></script>
+  <script src="./javascript.js"></script>
 </html>

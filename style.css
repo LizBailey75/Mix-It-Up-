@@ -18,3 +18,7 @@ height: 80px;
   .card-body  {
     font-family: "Elsie", "monospace", "serif";
   }
+  
+  .ul {
+    list-style-type: none;
+  }
