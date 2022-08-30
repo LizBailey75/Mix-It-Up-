@@ -9,8 +9,9 @@
       rel="stylesheet"
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"/>
-    <!--  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=elsie&family=roboto">-->
-    <link rel="stylesheet" href="./style.css" />
+    <!--  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=elsie?>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=roboto/>   -->
+    <link rel="stylesheet" href="./style.css"/> 
   </head>
   <!-- Background image -->
   </div>
@@ -24,7 +25,7 @@
       <div class="row  justify-content-around">
       <!--<div class="card-deck">-->
       <!--set up container-->
-          <div class="card col-sm-3 bg-transparent rounded border-success text-centered h-70">
+          <div class="card col-sm-3 bg-transparent rounded border-success text-centered">
             <!--card has picture which is blank, text,  and input form.-->
             <h3 class="card-header text-white">Enter Cocktail Name</h3>
             <div class="card-body" id="cocktail">
@@ -36,9 +37,9 @@
               </div>
             </div>
           </div>
-          <div class="card col-sm-3 bg-transparent rounded  border-success text-centered h-70">
+          <div class="card col-sm-3 bg-transparent rounded  border-success text-centered">
             <h3 class="card-header text-white">Enter Cocktail Ingredient</h3>     
-            <div class="card-body">
+            <div class="card-body" id="ingredcard">
               <p class="card-text" id="ingredient"></p>
               <img class="card-img" src=""  id="ingredpic"/> 
               <div form class="d-flex">
@@ -47,10 +48,10 @@
               </div>
             </div>
           </div>
-          <div class="card col-sm-3  bg-transparent rounded  border-success text-centered h-70">
+          <div class="card col-sm-3  bg-transparent rounded  border-success text-centered">
             <h3 class="card-header text-white">Choose Random Cocktail</h3>
             <div class="card-body" id="choice">
-              <button type="submit" class="btn btn-success"  id="choose-button">Show me something new!></button>
+              <button type="submit" class="btn btn-success"  id="choose-button">Show me something new!</button>
               <p class="card-text" ></p>
               <img class="card-img" src="" id="randompic"/>
               <div id="cocktailTitle"></div>
@@ -58,6 +59,23 @@
           </div>
         </div>   
       </div>
+      <!--<div class="modal" tabindex="-1" role="dialog" id="error-modal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="Oops!">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="error-message">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal" id="close-btn">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>  -->
     </main>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
