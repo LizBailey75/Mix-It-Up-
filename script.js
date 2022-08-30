@@ -1,6 +1,7 @@
 var subbtnEl = document.getElementById('choose-button')
 
-subbtnEl.addEventListener('click', getRandomCocktail)
+//subbtnEl.addEventListener('click', document.location.reload(false));
+subbtnEl.addEventListener('click', getRandomCocktail);
 
 //retrieve random drink
 function getRandomCocktail(event) {
@@ -48,27 +49,120 @@ function displayRandomCocktail(cocktailData) {
 
 
     //display ingredients
-    var cocktailInfoElement = document.getElementById('howTo');
-
-    var result = '';
-    for (var i = 0; i <= 15; i++) {
-        var measures = 'strMeasure' + i;
-        var ingredients = 'strIngredient' + i;
-        if ((cocktailData.drinks[0].measures) && (cocktailData.drinks[0].ingredients) !== "") {
-            result = result + ` <p>${cocktailData.drinks[0].measures} ${cocktailData.drinks[0].ingredients}</p>`;
-
-            cocktailInfoElement.innerHTML = result;
-        };
-    }
+    var cocktailInfoElement = document.getElementById('ingredients');
 
 
-    //display instructions
+    for (var i = 0; i < cocktailData.drinks.length; i++ ) {
+        if (cocktailData.drinks[i].strIngredient1 !== null) {
+            var node = document.createElement("li");
+            var textnode = document.createTextNode(cocktailData.drinks[i].strMeasure1 + ' ' + cocktailData.drinks[i].strIngredient1);
+            node.appendChild(textnode);
+            document.getElementById("ingredients").appendChild(node);
+        }
+    
+        if (cocktailData.drinks[i].strIngredient2 !== null) {
+            var node = document.createElement("li");
+            var textnode = document.createTextNode(cocktailData.drinks[i].strMeasure2 + ' ' + cocktailData.drinks[i].strIngredient2);
+            node.appendChild(textnode);
+            document.getElementById("ingredients").appendChild(node);
+        }
+   
+        if (cocktailData.drinks[i].strIngredient3 !== null) {
+            var node = document.createElement("li");
+            var textnode = document.createTextNode((cocktailData.drinks[i].strMeasure3 ? cocktailData.drinks[i].strMeasure3 + ' ' : '') + cocktailData.drinks[i].strIngredient3);
+            node.appendChild(textnode);
+            document.getElementById("ingredients").appendChild(node);
+        }
+   
+        if (cocktailData.drinks[i].strIngredient4 !== null) {
+            var node = document.createElement("li");
+            var textnode = document.createTextNode((cocktailData.drinks[i].strMeasure4 ? cocktailData.drinks[i].strMeasure4 + ' ' : '') + cocktailData.drinks[i].strIngredient4);
+            node.appendChild(textnode);
+            document.getElementById("ingredients").appendChild(node);
+        }
+   
+        if (cocktailData.drinks[i].strIngredient5 !== null) {
+            var node = document.createElement("li");
+            var textnode = document.createTextNode(cocktailData.drinks[i].strMeasure5 + ' ' + cocktailData.drinks[i].strIngredient5);
+            node.appendChild(textnode);
+            document.getElementById("ingredients").appendChild(node);
+        }
+   
+        if (cocktailData.drinks[i].strIngredient6 !== null) {
+            var node = document.createElement("li");
+            var textnode = document.createTextNode(cocktailData.drinks[i].strMeasure6 + ' ' + cocktailData.drinks[i].strIngredient6);
+            node.appendChild(textnode);
+            document.getElementById("ingredients").appendChild(node);
+        }
+   
+        if (cocktailData.drinks[i].strIngredient7 !== null) {
+            var node = document.createElement("li");
+            var textnode = document.createTextNode(cocktailData.drinks[i].strMeasure7 + ' ' + cocktailData.drinks[i].strIngredient7);
+            node.appendChild(textnode);
+            document.getElementById("ingredients").appendChild(node);
+        }
+   
+        if (cocktailData.drinks[i].strIngredient8 !== null) {
+            var node = document.createElement("li");
+            var textnode = document.createTextNode(cocktailData.drinks[i].strMeasure8 + ' ' + cocktailData.drinks[i].strIngredient8);
+            node.appendChild(textnode);
+            document.getElementById("ingredients").appendChild(node);
+        }
+    
+        if (cocktailData.drinks[i].strIngredient9 !== null) {
+            var node = document.createElement("li");
+            var textnode = document.createTextNode(cocktailData.drinks[i].strMeasure9 + ' ' + cocktailData.drinks[i].strIngredient9);
+            node.appendChild(textnode);
+            document.getElementById("ingredients").appendChild(node);
+        }
+    
+        if (cocktailData.drinks[i].strIngredient10 !== null) {
+            var node = document.createElement("li");
+            var textnode = document.createTextNode(cocktailData.drinks[i].strMeasure10 + ' ' + cocktailData.drinks[i].strIngredient10);
+            node.appendChild(textnode);
+            document.getElementById("ingredients").appendChild(node);
+        }
+    
+        if (cocktailData.drinks[i].strIngredient11 !== null) {
+            var node = document.createElement("li");
+            var textnode = document.createTextNode(cocktailData.drinks[i].strMeasure11 + ' ' + cocktailData.drinks[i].strIngredient11);
+            node.appendChild(textnode);
+            document.getElementById("ingredients").appendChild(node);
+        }
+    
+        if (cocktailData.drinks[i].strIngredient12 !== null) {
+            var node = document.createElement("li");
+            var textnode = document.createTextNode(cocktailData.drinks[i].strMeasure12 + ' ' + cocktailData.drinks[i].strIngredient12);
+            node.appendChild(textnode);
+            document.getElementById("ingredients").appendChild(node);
+        }
+    
+        if (cocktailData.drinks[i].strIngredient13 !== null) {
+            var node = document.createElement("li");
+            var textnode = document.createTextNode(cocktailData.drinks[i].strMeasure13 + ' ' + cocktailData.drinks[i].strIngredient13);
+            node.appendChild(textnode);
+            document.getElementById("ingredients").appendChild(node);
+        }
+    
+        if (cocktailData.drinks[i].strIngredient14 !== null) {
+            var node = document.createElement("li");
+            var textnode = document.createTextNode(cocktailData.drinks[i].strMeasure14 + ' ' + cocktailData.drinks[i].strIngredient14);
+            node.appendChild(textnode);
+            document.getElementById("ingredients").appendChild(node);
+        }
+    
+        if (cocktailData.drinks[i].strIngredient15 !== null) {
+            var node = document.createElement("li");
+            var textnode = document.createTextNode(cocktailData.drinks[i].strMeasure15 + ' ' + cocktailData.drinks[i].strIngredient15);
+            node.appendChild(textnode);
+            document.getElementById("ingredients").appendChild(node);
+        }
+
+ 
+        //display instructions
     var cocktailInstructionsElement = document.getElementById('instructions');
     let instructions = `
     </br><p>${cocktailData.drinks[0].strInstructions}</p>`;
 
     cocktailInstructionsElement.innerHTML = instructions;
-
-}
-
-
+    }}
