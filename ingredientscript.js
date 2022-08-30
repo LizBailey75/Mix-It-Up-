@@ -29,6 +29,9 @@ console.log(inputIngredText);
 
   function displayCocktail(data) {
     var cocktail = data.drinks;
+    //if (data.Drinks[0] == null) {
+    //    badDrinkName();
+  //}
     console.log(cocktail);
 
     const cocktailPage = document.getElementById("ingredcard");
@@ -62,3 +65,15 @@ console.log(inputIngredText);
     }
   }
 }
+//function badDrinkName() {
+ //   var modal = $("#error-modal");
+//    var close = $("#close-btn");
+ //   var message = $("#error-message")
+//   modal.style.display = "block";
+//   var message = `<p>Your drink name is not found.</p>`
+//   close.onclick = function() {
+ //  modal.style.display = "none";
+//   }
+ //  $("#inputdrink").empty();
+   //return;                          ????to get back to the document ready function???
+  // }
