@@ -5,6 +5,8 @@ subbtnEl.addEventListener('click', getRandomCocktail)
 //retrieve random drink
 function getRandomCocktail(event) {
     event.preventDefault();
+    const cocktailPage = document.getElementById("random");
+    cocktailPage.setAttribute("class", "bg-success text-white");
     fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php'
     )
         .then((Response) => Response.json())
