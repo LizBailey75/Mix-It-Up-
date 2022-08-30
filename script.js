@@ -29,31 +29,29 @@ function displayRandomCocktail(cocktailData) {
    
     //display title
     var cocktailTitleElement = document.getElementById('cocktailTitle');
+   
+    console.log(cocktailData.drinks[0].strDrink);
 
-    //var cocktailTitle = 'src = cocktail.drinks[0].strDrink' + 
-    //'Type of glass: ' + 'src = cocktalData.drinks[0].strGlass';
-    
-    console.log(cocktailTitleElement.setAttribute("src", cocktailData.drinks[0].strDrink));
+    cocktailTitleElement.innerHTML = cocktailData.drinks[0].strDrink;
+   
 
-    cocktailTitleElement.innerHTML = cocktailTitleElement.setAttribute("src", cocktailData.drinks[0].strDrink);
+    //display glass
+    var cocktailGlassElement = document.getElementById('cocktailGlass');
 
+    console.log(cocktailData.drinks[0].strGlass)
 
-
-
-
+    cocktailGlassElement.innerHTML = cocktailData.drinks[0].strGlass;
 
 
-
-    
     //display ingredients
     var cocktailInfoElement = document.getElementById('howTo');
 
-    let result = '';
-    for (var i = 1; i <= 15; i++) {
-        let measures = 'strMeasure' + i;
-        let ingridients = 'strIngredient' + i;
-        if ((drinks[0][measures]) && (drinks[0][ingridients]) !== "") {
-            result = result + ` <p>${drinks[0][measures]} ${drinks[0][ingridients]}</p>`;
+    var result = '';
+    for (var i = 0; i <= 15; i++) {
+        var measures = 'strMeasure' + i;
+        var ingridients = 'strIngredient' + i;
+        if ((cocktailData.drinks[0].measures) && (cocktailData.drinks[0].ingridients) !== "") {
+            result = result + ` <p>${cocktailData.drinks[0].measures} ${cocktailData.drinks[0].ingridients}</p>`;
 
             cocktailInfoElement.innerHTML = result;
         };
@@ -63,52 +61,10 @@ function displayRandomCocktail(cocktailData) {
     //display instructions
     var cocktailInstructionsElement = document.getElementById('instructions');
     let instructions = `
-    </br><p>${drinks[0].strInstructions}</p>`;
+    </br><p>${cocktailData.drinks[0].strInstructions}</p>`;
 
     cocktailInstructionsElement.innerHTML = instructions;
 
 }
 
 
-//Function that creates html display
-function displayinputvalue(cocktailData) {
-    var { drinks } = cocktailData;
-    var cocktailpictureElement = document.getElementById('cocktailPicture');
-    var cocktailPicture = `
-    <img class="drinkThumb" src= "${drinks[0].strDrinkThumb}">`;
-
-    cocktailpictureElement.innerHTML = cocktailPicture;
-
-    //display title
-    var cocktailTitleElement = document.getElementById('cocktailTitle');
-
-    var cocktailInfo = `
-    <h4 class="cocktailName"> ${drinks[0].strDrink} </h4>
-    <p class="typeOfglass">Type of glass:</p><p>${drinks[0].strGlass}</p>
-    </br><p class="howToMake">How to make:</p>`
-
-    cocktailTitleElement.innerHTML = cocktailInfo;
-
-
-    //display ingredients
-    var cocktailInfoElement = document.getElementById('howTo');
-
-    let result = '';
-    for (var i = 1; i <= 15; i++) {
-        let measures = 'strMeasure' + i;
-        let ingridients = 'strIngredient' + i;
-        if ((drinks[0][measures]) && (drinks[0][ingridients]) !== "") {
-            result = result + ` <p>${drinks[0][measures]} ${drinks[0][ingridients]}</p>`;
-
-            cocktailInfoElement.innerHTML = result;
-        };
-    }
-
-
-    //display instructions
-    var cocktailInstructionsElement = document.getElementById('instructions');
-    let instructions = `
-    </br><p>${drinks[0].strInstructions}</p>`;
-
-    cocktailInstructionsElement.innerHTML = instructions;
-}
