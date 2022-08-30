@@ -92,6 +92,31 @@ console.log(inputdrinkText);
     var cocktailImg = document.createElement("img");
     cocktailImg.src = cocktail.strDrinkThumb;
     cocktailPage.appendChild(cocktailImg);
+
+const getIngredients = Object.keys(cocktail)                   //these filter/reduce functions return only actual ingredients, 
+    .filter(function (ingredient) {                         //as Drinks.ingredients has 15 entries, some of which are null 
+      return ingredient.indexOf("strIngredient") == 0;      //credit w3collective.com/fetch-display-api-data-javascript
+    })
+    .reduce(function (ingredients, ingredient) {
+      if (cocktail[ingredient] != null) {
+        ingredients[ingredient] = cocktail[ingredient];
+      }
+      return ingredients;
+    }, {});
+
+
+  for (let key in getIngredients) {
+    let value = getIngredients[key];
+
+}
+  
+  var cocktailIngredients = ingredients;
+
+    listItem = document.createElement("li");
+    listItem.innerHTML = value
+    cocktailIngredients.appendChild(listItem);
+   
+
   }
 }
 
