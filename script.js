@@ -54,8 +54,8 @@ function displayRandomCocktail(cocktailData) {
     for (var i = 0; i <= 15; i++) {
         var measures = 'strMeasure' + i;
         var ingredients = 'strIngredient' + i;
-        if ((cocktailData.drinks[0].measures) && (cocktailData.drinks[0].ingridients) !== "") {
-            result = result + ` <p>${cocktailData.drinks[0].measures} ${cocktailData.drinks[0].ingridients}</p>`;
+        if ((cocktailData.drinks[0].measures) && (cocktailData.drinks[0].ingredients) !== "") {
+            result = result + ` <p>${cocktailData.drinks[0].measures} ${cocktailData.drinks[0].ingredients}</p>`;
 
             cocktailInfoElement.innerHTML = result;
         };
