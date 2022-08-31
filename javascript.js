@@ -33,8 +33,7 @@ console.log(inputdrinkText);
       console.log(data);
       displayCocktail(data);
     })
-    .catch((error) => badDrinkName());
-    //console.error("FETCH ERROR:", error));
+    .catch((error) => console.error("FETCH ERROR:", error));
 
   function displayCocktail(data) {
     var cocktail = data.drinks[0];
@@ -83,47 +82,17 @@ console.log(inputdrinkText);
     cocktailImg.setAttribute("height", "200");
     cocktailImg.src = cocktail.strDrinkThumb;
     cocktailPage.appendChild(cocktailImg);
-<<<<<<< HEAD
-    
-=======
-
-const getIngredients = Object.keys(cocktail)                   //these filter/reduce functions return only actual ingredients, 
-    .filter(function (ingredient) {                         //as Drinks.ingredients has 15 entries, some of which are null 
-      return ingredient.indexOf("strIngredient") == 0;      //credit w3collective.com/fetch-display-api-data-javascript
-    })
-    .reduce(function (ingredients, ingredient) {
-      if (cocktail[ingredient] != null) {
-        ingredients[ingredient] = cocktail[ingredient];
-      }
-      return ingredients;
-    }, {});
-
-
-  for (let key in getIngredients) {
-    let value = getIngredients[key];
-
-}
-  
-  var cocktailIngredients = ingredients;
-
-    listItem = document.createElement("li");
-    listItem.innerHTML = value
-    cocktailIngredients.appendChild(listItem);
-   
-
-  }
->>>>>>> main
 }
   }
-function badDrinkName() {
- var modal = $("#error-modal");
- var close = $("#close-btn");
- var message = $("#error-message")
-modal.style.display = "block";
-var message = `<p>Your drink name is not found.</p>`
-close.onclick = function() {
-modal.style.display = "none";
-}
-$("#inputdrink").empty();
+//function badDrinkName() {
+// var modal = $("#error-modal");
+// var close = $("#close-btn");
+// var message = $("#error-message")
+//modal.style.display = "block";
+//var message = `<p>Your drink name is not found.</p>`
+//close.onclick = function() {
+//modal.style.display = "none";
+//}
+//$("#inputdrink").empty();
 //return;                          ????to get back to the document ready function???
-}
+//}
