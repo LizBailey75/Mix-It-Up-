@@ -2,7 +2,7 @@ var ingredientSearched = [];
 var ingredientSearchedLocal =
   JSON.parse(localStorage.getItem("ingredientSearched")) || [];
 
-  
+
 
 document.getElementById("ingred-button").addEventListener("click", handleSearchFormSubmit);
 var inputIngredText = document.getElementById("inputingred").value;
@@ -46,7 +46,7 @@ console.log(inputIngredText);
 
     
     const cocktailSuggestions = document.createElement("ul");
-    cocktailSuggestions.setAttribute("class", "list-unstyled");
+    cocktailSuggestions.setAttribute("class", "list-group-flush list-unstyled");
     cocktailPage.appendChild(cocktailSuggestions);
 
     for  (i= 0; i < 4; i++) {
