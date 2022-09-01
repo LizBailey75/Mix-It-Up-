@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: elsie, roboto;
+  margin: 0;
+}
+main {
+  display: flex;
+  /* Forces elements to the next line if they don't fit */
+  flex-wrap: wrap;
+  margin-top: 2%;
+}
+.d-inline-block w-100 {
+  display: flex;
+  /* Forces elements to the next line if they don't fit */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 60px;
+  background: #13293D;
+  color: #fff;
+}
+.card-body {
+  flex: 1 0 0;
+  padding: 10px;
+  text-align: center;
+  border-style: solid;
+  border-width: 1px;
+}                                                                                                              
